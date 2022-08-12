@@ -68,11 +68,11 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 "AnalizadorBison.y"
+#line 1 "bison.y"
 
 #include <stdio.h>
 #include <math.h>
-#include "tablaDeSimbolos.h"
+#include "../tablaDeSimbolos.h"
 
 #define YYERROR_VERBOSE 1
 
@@ -90,7 +90,7 @@ listaParametros parametros = {NULL};
 
 
 /* Line 189 of yacc.c  */
-#line 94 "AnalizadorBison.tab.c"
+#line 94 "bison.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -168,7 +168,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 21 "AnalizadorBison.y"
+#line 21 "bison.y"
 
  char* cadena;
  struct yylval_struct {
@@ -180,7 +180,7 @@ typedef union YYSTYPE
 
 
 /* Line 214 of yacc.c  */
-#line 184 "AnalizadorBison.tab.c"
+#line 184 "bison.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -192,7 +192,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 196 "AnalizadorBison.tab.c"
+#line 196 "bison.tab.c"
 
 #ifdef short
 # undef short
@@ -1897,77 +1897,77 @@ yyreduce:
         case 6:
 
 /* Line 1455 of yacc.c  */
-#line 58 "AnalizadorBison.y"
+#line 58 "bison.y"
     { yyerrok;;}
     break;
 
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 65 "AnalizadorBison.y"
+#line 65 "bison.y"
     {flag_funcion=0;;}
     break;
 
   case 31:
 
 /* Line 1455 of yacc.c  */
-#line 102 "AnalizadorBison.y"
+#line 102 "bison.y"
     {if (flag_funcion==0){VARIABLE var={(yyvsp[(0) - (1)].cadena), (yyvsp[(1) - (1)].cadena)}; agregarVariable(var); };}
     break;
 
   case 32:
 
 /* Line 1455 of yacc.c  */
-#line 103 "AnalizadorBison.y"
+#line 103 "bison.y"
     {VARIABLE var={(yyvsp[(0) - (3)].cadena), (yyvsp[(1) - (3)].cadena)}; agregarVariable(var);;}
     break;
 
   case 46:
 
 /* Line 1455 of yacc.c  */
-#line 131 "AnalizadorBison.y"
+#line 131 "bison.y"
     {strcat((yyvsp[(0) - (4)].cadena),"*");;}
     break;
 
   case 47:
 
 /* Line 1455 of yacc.c  */
-#line 132 "AnalizadorBison.y"
+#line 132 "bison.y"
     {strcat((yyvsp[(0) - (3)].cadena),"*");;}
     break;
 
   case 48:
 
 /* Line 1455 of yacc.c  */
-#line 133 "AnalizadorBison.y"
+#line 133 "bison.y"
     {flag_funcion=1; FUNCION func = {(yyvsp[(0) - (4)].cadena), (yyvsp[(1) - (4)].cadena), parametros}; agregarFuncion(func); limpiarParametros(&parametros);;}
     break;
 
   case 50:
 
 /* Line 1455 of yacc.c  */
-#line 135 "AnalizadorBison.y"
+#line 135 "bison.y"
     {flag_funcion=1; FUNCION func = {(yyvsp[(0) - (3)].cadena), (yyvsp[(1) - (3)].cadena), parametros}; agregarFuncion(func); ;}
     break;
 
   case 56:
 
 /* Line 1455 of yacc.c  */
-#line 149 "AnalizadorBison.y"
+#line 149 "bison.y"
     {agregarParametro(&parametros, (yyvsp[(1) - (2)].cadena));;}
     break;
 
   case 58:
 
 /* Line 1455 of yacc.c  */
-#line 151 "AnalizadorBison.y"
+#line 151 "bison.y"
     {agregarParametro(&parametros, (yyvsp[(1) - (1)].cadena));;}
     break;
 
   case 146:
 
 /* Line 1455 of yacc.c  */
-#line 268 "AnalizadorBison.y"
+#line 268 "bison.y"
     { char* tipo1 = tipoParametro((yyvsp[(1) - (3)].mystruct).tipo);
                                                                           char* tipo2 = tipoParametro((yyvsp[(3) - (3)].mystruct).tipo);
                                                                           if (tipo1!="NULL" && tipo2!="NULL"){
@@ -1982,7 +1982,7 @@ yyreduce:
   case 150:
 
 /* Line 1455 of yacc.c  */
-#line 281 "AnalizadorBison.y"
+#line 281 "bison.y"
     { if ((yyvsp[(3) - (3)].mystruct).valor_entero == 0 || (yyvsp[(3) - (3)].mystruct).valor_float == 0) {
                                                                             printf("\n%d: Error semantico, No se puede dividir por 0",yylineno);
                                                                             aumentarErrorSemantico();  
@@ -1993,35 +1993,35 @@ yyreduce:
   case 165:
 
 /* Line 1455 of yacc.c  */
-#line 304 "AnalizadorBison.y"
+#line 304 "bison.y"
     {validarInvocacion((yyvsp[(1) - (4)].cadena),parametros); limpiarParametros(&parametros);;}
     break;
 
   case 166:
 
 /* Line 1455 of yacc.c  */
-#line 305 "AnalizadorBison.y"
+#line 305 "bison.y"
     {validarInvocacion((yyvsp[(1) - (3)].cadena),parametros); limpiarParametros(&parametros);;}
     break;
 
   case 173:
 
 /* Line 1455 of yacc.c  */
-#line 314 "AnalizadorBison.y"
+#line 314 "bison.y"
     {agregarParametro(&parametros, tipoParametro((yyvsp[(1) - (1)].mystruct).tipo)); ;}
     break;
 
   case 174:
 
 /* Line 1455 of yacc.c  */
-#line 315 "AnalizadorBison.y"
+#line 315 "bison.y"
     {agregarParametro(&parametros, tipoParametro((yyvsp[(3) - (3)].mystruct).tipo)); ;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 2025 "AnalizadorBison.tab.c"
+#line 2025 "bison.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -2233,21 +2233,29 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 325 "AnalizadorBison.y"
+#line 325 "bison.y"
 
 
-int main()
+int main(int argc, char **argv)
 {
-    yyin = fopen("ArchivoDeEntrada.c","r");
+  if (argc < 2)
+  {
+    printf("Error: Falta pasar el archivo a analizar\n");
+    return 1;
+  }
 
-    yyparse();
+  char* pathArchivo = argv[1];
 
-    fclose(yyin);
+  yyin = fopen(pathArchivo,"r");
 
-    validarAnalisisLexico();
-    printf("El analisis sintactico concluyo con %d errores\n",yynerrs);
+  yyparse();
+
+  fclose(yyin);
+
+  validarAnalisisLexico();
+  printf("El analisis sintactico concluyo con %d errores\n",yynerrs);
     
-    resultadoAnalisisSemantico();
+  resultadoAnalisisSemantico();
 
-    return 0;
+  return 0;
 }

@@ -557,10 +557,10 @@ goto find_rule; \
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "AnalizadorFlex.l"
+#line 1 "flex.l"
 #define INITIAL 0
-#line 5 "AnalizadorFlex.l"
-    #include "AnalizadorBison.tab.h"
+#line 5 "flex.l"
+    #include "../bison/bison.tab.h"
     #include <stdio.h>
     #include <stdlib.h>
     #include <string.h>
@@ -717,7 +717,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 47 "AnalizadorFlex.l"
+#line 47 "flex.l"
 
 
 #line 724 "lex.yy.c"
@@ -813,197 +813,197 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 49 "AnalizadorFlex.l"
+#line 49 "flex.l"
 {yylval.cadena=strdup(yytext); return INT;}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 50 "AnalizadorFlex.l"
+#line 50 "flex.l"
 {yylval.cadena=strdup(yytext); return DOUBLE;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 51 "AnalizadorFlex.l"
+#line 51 "flex.l"
 {yylval.cadena=strdup(yytext); return CHAR;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 52 "AnalizadorFlex.l"
+#line 52 "flex.l"
 {yylval.cadena=strdup(yytext); return FLOAT;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 53 "AnalizadorFlex.l"
+#line 53 "flex.l"
 {yylval.cadena=strdup(yytext); return SHORT;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 54 "AnalizadorFlex.l"
+#line 54 "flex.l"
 {yylval.cadena=strdup(yytext); return LONG;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 55 "AnalizadorFlex.l"
+#line 55 "flex.l"
 {yylval.cadena=strdup(yytext); return VOID;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 56 "AnalizadorFlex.l"
+#line 56 "flex.l"
 {return IF;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 57 "AnalizadorFlex.l"
+#line 57 "flex.l"
 {return ELSE;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 58 "AnalizadorFlex.l"
+#line 58 "flex.l"
 {return WHILE;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 59 "AnalizadorFlex.l"
+#line 59 "flex.l"
 {return FOR;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 60 "AnalizadorFlex.l"
+#line 60 "flex.l"
 {return RETURN;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 62 "AnalizadorFlex.l"
+#line 62 "flex.l"
 {return OR_LOGICO;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 63 "AnalizadorFlex.l"
+#line 63 "flex.l"
 {return AND_LOGICO;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 65 "AnalizadorFlex.l"
+#line 65 "flex.l"
 {return IGUAL_IGUAL;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 66 "AnalizadorFlex.l"
+#line 66 "flex.l"
 {return DISTINTO;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 67 "AnalizadorFlex.l"
+#line 67 "flex.l"
 {return MAS_IGUAL;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 68 "AnalizadorFlex.l"
+#line 68 "flex.l"
 {return MENOS_IGUAL;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 69 "AnalizadorFlex.l"
+#line 69 "flex.l"
 {return POR_IGUAL;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 70 "AnalizadorFlex.l"
+#line 70 "flex.l"
 {return MAS_MAS;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 71 "AnalizadorFlex.l"
+#line 71 "flex.l"
 {return MENOS_MENOS;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 72 "AnalizadorFlex.l"
+#line 72 "flex.l"
 {return MENOR_IGUAL;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 73 "AnalizadorFlex.l"
+#line 73 "flex.l"
 {return MAYOR_IGUAL;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 75 "AnalizadorFlex.l"
+#line 75 "flex.l"
 {return INCLUDE;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 76 "AnalizadorFlex.l"
+#line 76 "flex.l"
 {return INCLUDE;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 77 "AnalizadorFlex.l"
+#line 77 "flex.l"
 {return DEFINE;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 79 "AnalizadorFlex.l"
+#line 79 "flex.l"
 {yylval.mystruct.valor_entero=atoi(yytext);yylval.mystruct.tipo="int"; return CONSTANTE_DECIMAL;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 81 "AnalizadorFlex.l"
+#line 81 "flex.l"
 {yylval.mystruct.valor_entero=strtol(yytext,NULL,8); yylval.mystruct.tipo="int";return CONSTANTE_OCTAL;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 83 "AnalizadorFlex.l"
+#line 83 "flex.l"
 {yylval.mystruct.valor_float=strtol(yytext,NULL,16);yylval.mystruct.tipo="float";return CONSTANTE_HEXADECIMAL;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 85 "AnalizadorFlex.l"
+#line 85 "flex.l"
 {yylval.mystruct.valor_float=atof(yytext);yylval.mystruct.tipo="float" ;return CONSTANTE_REAL;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 87 "AnalizadorFlex.l"
+#line 87 "flex.l"
 {return yytext[0];}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 89 "AnalizadorFlex.l"
+#line 89 "flex.l"
 {yylval.mystruct.tipo="char";return CONSTANTE_CARACTER;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 91 "AnalizadorFlex.l"
+#line 91 "flex.l"
 {yylval.cadena=strdup(yytext); return IDENTIFICADOR;}   
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 93 "AnalizadorFlex.l"
+#line 93 "flex.l"
 {yylval.mystruct.tipo="char*"; return LITERAL_CADENA;}                                         
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 95 "AnalizadorFlex.l"
+#line 95 "flex.l"
 {}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 97 "AnalizadorFlex.l"
+#line 97 "flex.l"
 {}   
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 99 "AnalizadorFlex.l"
+#line 99 "flex.l"
 {}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 101 "AnalizadorFlex.l"
+#line 101 "flex.l"
 { printf("\n%d: error lexico, Token no reconocido: %s",yylineno, yytext); cantidadDeErroresLexicos++;}
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 103 "AnalizadorFlex.l"
+#line 103 "flex.l"
 ECHO;
 	YY_BREAK
 #line 1010 "lex.yy.c"
@@ -1890,7 +1890,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 103 "AnalizadorFlex.l"
+#line 103 "flex.l"
 
 
 void validarAnalisisLexico() {
