@@ -2,7 +2,7 @@
 %option yylineno
 
 %{
-    #include "AnalizadorBison.tab.h"
+    #include "../bison/bison.tab.h"
     #include <stdio.h>
     #include <stdlib.h>
     #include <string.h>

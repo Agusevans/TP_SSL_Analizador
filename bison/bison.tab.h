@@ -90,7 +90,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 21 "AnalizadorBison.y"
+#line 21 "bison.y"
 
  char* cadena;
  struct yylval_struct {
@@ -102,7 +102,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 106 "AnalizadorBison.tab.h"
+#line 106 "bison.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

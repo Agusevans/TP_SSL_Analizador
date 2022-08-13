@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../README.md"
+#include "README.md"
 
 #define HOLA
 

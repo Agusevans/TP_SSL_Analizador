@@ -1,7 +1,7 @@
 %{
 #include <stdio.h>
 #include <math.h>
-#include "tablaDeSimbolos.h"
+#include "../src/tablaDeSimbolos.h"
 
 #define YYERROR_VERBOSE 1
 
@@ -324,18 +324,26 @@ constante: CONSTANTE_OCTAL
 
 %%
 
-int main()
+int main(int argc, char **argv)
 {
-    yyin = fopen("ArchivoDeEntrada.c","r");
+  if (argc < 2)
+  {
+    printf("Error: Falta pasar el archivo a analizar\n");
+    return 1;
+  }
 
-    yyparse();
+  char* pathArchivo = argv[1];
 
-    fclose(yyin);
+  yyin = fopen(pathArchivo,"r");
 
-    validarAnalisisLexico();
-    printf("El analisis sintactico concluyo con %d errores\n",yynerrs);
+  yyparse();
+
+  fclose(yyin);
+
+  validarAnalisisLexico();
+  printf("El analisis sintactico concluyo con %d errores\n",yynerrs);
     
-    resultadoAnalisisSemantico();
+  resultadoAnalisisSemantico();
 
-    return 0;
+  return 0;
 }
