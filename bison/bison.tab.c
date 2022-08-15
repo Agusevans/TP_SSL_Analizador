@@ -72,7 +72,7 @@
 
 #include <stdio.h>
 #include <math.h>
-#include "../tablaDeSimbolos.h"
+#include "../src/tablaDeSimbolos.h"
 
 #define YYERROR_VERBOSE 1
 
